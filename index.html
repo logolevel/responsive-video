@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        video {
+            width: 100%;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('.video').addClass('asd');
+        });
+    </script>
+</head>
+<body>
+    <video class="video" controls>
+        <source class="video-sorce" data-video-big="http://html5videoformatconverter.com/data/images/happyfit2.mp4">
+        <source class="video-sorce" data-video-small="https://s3.eu-central-1.amazonaws.com/pipe.public.content/pink-swan.mp4">
+        <source class="video-output" src="http://html5videoformatconverter.com/data/images/happyfit2.mp4" type="video/mp4">
+    </video>
+</body>
+</html>
