@@ -14,7 +14,15 @@
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function() {
-            $('.video').addClass('asd');
+            $(window).on('resize', function() {
+                if ($(window).width() < 960) {
+                alert('Less than 960');
+            }
+            else {
+                alert('More than 960');
+            }
+            });
+
         });
     </script>
 </head>
