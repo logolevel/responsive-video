@@ -5,32 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-
-    <style>
-        video {
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function() {
-            $(window).on('resize', function() {
-                if ($(window).width() < 960) {
-                alert('Less than 960');
-            }
-            else {
-                alert('More than 960');
-            }
-            });
+            // const $videoSource = $('.video-source');
+            // console.log($videoSource);
 
+            // for (let i = 0; i < $videoSource.length; i++) {
+            //     let videoSmall = $videoSource[i].dataset.videoSmall;
+            //     $videoSource[i].src = videoSmall;
+            //     console.log($videoSource[i]);
+            // }
+
+
+
+            // COMMENT: for one                     
+            // const videoSmall = $('.video-source').data('video-small');
+            // const videoBig = $('.video-source').data('video-big');
+
+            // console.log(videoSmall);
+            // console.log(videoBig);
+            
+            // $(window).on('resize', function() {
+            //     if ($(window).width() < 769) {
+            //         $('.video-source').attr('src', `${videoSmall}`);
+            //         $('.video').load();
+                    
+            //     }
+            //     else {
+            //         $('.video-source').attr('src', `${videoBig}`);
+            //         $('.video').load();
+            //     }
+            // });
+
+
+
+
+
+
+            // COMMENT for css
+            $(window).on('resize', function() {
+                if ($(window).width() < 769) {
+                    $('.video').load();
+                    
+                }
+                else {
+                    $('.video').load();
+                }
+            });
         });
     </script>
 </head>
 <body>
-    <video class="video" controls>
-        <source class="video-sorce" data-video-big="http://html5videoformatconverter.com/data/images/happyfit2.mp4">
-        <source class="video-sorce" data-video-small="https://s3.eu-central-1.amazonaws.com/pipe.public.content/pink-swan.mp4">
-        <source class="video-output" src="http://html5videoformatconverter.com/data/images/happyfit2.mp4" type="video/mp4">
+    <!-- <h1>First</h1> -->
+    <!-- <video class="video" controls autoplay width="100%" height="200px">
+            <source class="video-source"
+            data-video-small="https://s3.eu-central-1.amazonaws.com/pipe.public.content/pink-swan.mp4"
+            data-video-big="http://html5videoformatconverter.com/data/images/happyfit2.mp4"
+            src="http://html5videoformatconverter.com/data/images/happyfit2.mp4" type="video/mp4">
     </video>
+    <h1>Second</h1>
+    <video class="video" controls autoplay width="100%" height="200px">
+            <source class="video-source"
+            data-video-small="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
+            data-video-big="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+    </video> -->
+
+
+    <h1>First</h1>
+    <div class="video-container">
+        <video class="video video-small" controls autoplay width="100%" height="200px">
+            <source src="https://s3.eu-central-1.amazonaws.com/pipe.public.content/pink-swan.mp4" type="video/mp4">
+        </video>
+        <video class="video video-big" controls autoplay width="100%" height="200px">
+            <source src="http://html5videoformatconverter.com/data/images/happyfit2.mp4" type="video/mp4">
+        </video>
+    </div>
+
+
+
+
+    <h1>Second</h1>
+    <div class="video-container">
+        <video class="video video-small" controls autoplay width="100%" height="200px">
+            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">
+        </video>
+        <video class="video video-big" controls autoplay width="100%" height="200px">
+            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+        </video>
+    </div>
 </body>
 </html>
